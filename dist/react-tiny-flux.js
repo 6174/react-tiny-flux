@@ -189,21 +189,21 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
-var State = function (_Component) {
-  inherits(State, _Component);
+var ReactTinyFlux = function (_Component) {
+  inherits(ReactTinyFlux, _Component);
 
-  function State() {
+  function ReactTinyFlux() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    classCallCheck(this, State);
+    classCallCheck(this, ReactTinyFlux);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref = State.__proto__ || Object.getPrototypeOf(State)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref = ReactTinyFlux.__proto__ || Object.getPrototypeOf(ReactTinyFlux)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       data: M.fromJS(_this.props.initial)
     }, _this.dispatch = function (action) {
       var asyncActions = _this.props.asyncActions;
@@ -237,7 +237,7 @@ var State = function (_Component) {
     }, _this.setState = _this.setState.bind(_this), _temp), possibleConstructorReturn(_this, _ret);
   }
 
-  createClass(State, [{
+  createClass(ReactTinyFlux, [{
     key: "render",
     value: function render() {
       return this.props.children({
@@ -248,15 +248,15 @@ var State = function (_Component) {
       });
     }
   }]);
-  return State;
+  return ReactTinyFlux;
 }(react.Component);
 
-State.defaultProps = {
+ReactTinyFlux.defaultProps = {
   initial: {},
   asyncActions: {},
   actions: {}
 };
 
-return State;
+return ReactTinyFlux;
 
 })));
