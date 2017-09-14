@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import M from "immutable";
-class State extends Component {
+class ReactTinyFlux extends Component {
   static defaultProps = {
     initial: {},
     asyncActions: {},
@@ -57,4 +57,4 @@ class State extends Component {
   }
 }
 
-export default State
+export default ReactTinyFlux
