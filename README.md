@@ -24,7 +24,10 @@ const asyncActions = {
   "todo-app/load-remote-todos": async (state, action, dispatch) => {
     try {
       const ret = await fetch(`//remote-todo-api`)
-      dispatch()
+      dispatch({
+        type: "todo-app/load/todos/success",
+        payload: ret
+      })
     } catch(err) {
       console.log(err)
     }
