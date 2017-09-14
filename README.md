@@ -56,3 +56,30 @@ const asyncActions = {
   )}
 </ReactTinyFlux>
 ```
+
+# Tips
+
+`dispatch` method in React  Tiny Flux  use `setState` method to update store data, and we know `setState` is an async function, so you cant dispatch multilpe sync actions like
+
+```js
+handleSubmit() {
+  dispatch({
+    type: 'action1'
+  })
+  dispatch({
+    type: 'action2'
+  })
+}
+```
+
+But you can dispatch multilpe sync actions in an array
+
+```js
+handleSubmit() {
+  dispatch([{
+    type: 'action1'
+  }, {
+    type: 'action2'
+  }])
+}
+```
